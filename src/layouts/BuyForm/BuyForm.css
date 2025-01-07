@@ -150,7 +150,7 @@
   }
 
   .introduce-container .introduce-img {
-    width: 350px;
+    width: 300px;
     height: auto;
   }
 
@@ -210,6 +210,11 @@
 @media (max-width: 768px) {
   .buy-title {
     font-size: 1.5rem;
+  }
+
+  .introduce-container .introduce-img {
+    width: 250px;
+    height: auto;
   }
 
   .introduce-content .introduce-text {

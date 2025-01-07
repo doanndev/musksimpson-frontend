@@ -37,19 +37,19 @@ const Navbar = () => {
                 <div className='menu'>
                     <ul>
                         <li onClick={() => handleScroll('about')}>About</li>
-                        <li onClick={() => handleScroll('about')}>How To Buy</li>
-                        <li onClick={() => handleScroll('about')}>Tokenomics</li>
-                        <li onClick={() => handleScroll('about')}>Roadmap</li>
-                        <li onClick={() => handleScroll('about')}>FAQ</li>
+                        <li onClick={() => handleScroll('howtobuy')}>How To Buy</li>
+                        <li onClick={() => handleScroll('tokenomics')}>Tokenomics</li>
+                        <li onClick={() => handleScroll('roadmap')}>Roadmap</li>
+                        <li onClick={() => handleScroll('faq')}>FAQ</li>
                     </ul>
                 </div>
                 <div className={`menu-mobile ${isMenuOpen ? 'open' : 'hidden'}`} >
                     <ul>
                         <li onClick={() => handleScroll('about')}>About</li>
-                        <li onClick={() => handleScroll('about')}>How To Buy</li>
-                        <li onClick={() => handleScroll('about')}>Tokenomics</li>
-                        <li onClick={() => handleScroll('about')}>Roadmap</li>
-                        <li onClick={() => handleScroll('about')}>FAQ</li>
+                        <li onClick={() => handleScroll('howtobuy')}>How To Buy</li>
+                        <li onClick={() => handleScroll('tokenomics')}>Tokenomics</li>
+                        <li onClick={() => handleScroll('roadmap')}>Roadmap</li>
+                        <li onClick={() => handleScroll('faq')}>FAQ</li>
                     </ul>
                 </div>
                 <MenuIcon className="menu-icon" onClick={toggleMenu} />

@@ -5,7 +5,7 @@ import Accordion from '@/components/Accordion'
 
 const FAQ = () => {
     return (
-        <div className='faq-section'>
+        <div id='faq' className='faq-section'>
             <div className='faq-title'>
                 <h1 className='title-text'>Frequently Asked Questions</h1>
                 <div className='title-underline'></div>

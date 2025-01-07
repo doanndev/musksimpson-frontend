@@ -39,7 +39,7 @@ const ParticlesEffect = () => {
     () => ({
       background: {
         color: {
-          value: "transparent",
+          value: "transprent",
         },
       },
       fpsLimit: 120,
@@ -56,7 +56,7 @@ const ParticlesEffect = () => {
         },
         modes: {
           push: {
-            quantity: 10,
+            quantity: 0,
           },
           repulse: {
             distance: 200,
@@ -89,7 +89,7 @@ const ParticlesEffect = () => {
           density: {
             enable: true,
           },
-          value: 80,
+          value: 100,
         },
         opacity: {
           value: 0.5,

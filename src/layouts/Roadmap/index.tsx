@@ -44,7 +44,7 @@ const Roadmap = () => {
         },
     ];
     return (
-        <div className='roadmap-section'>
+        <div id='roadmap' className='roadmap-section'>
             <div className='roadmap-title'>
                 <h1 className='title-text'>ROADMAP</h1>
                 <div className='title-underline'></div>

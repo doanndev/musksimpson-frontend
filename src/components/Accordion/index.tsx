@@ -48,7 +48,7 @@ const Accordion: React.FC = () => {
       <AccordionItem
         index={1}
         title="How do I participate in the $MSS staking?"
-        content="You can take part in the $PIKA staking on Binance Smart Chain. All you need to do is connect your Trust Wallet or other wallet to the staking widget above and use BNB to reserve $PIKA tokens."
+        content="You can take part in the $MSS staking on Binance Smart Chain. All you need to do is connect your Trust Wallet or other wallet to the staking widget above and use BNB to reserve $MSS tokens."
         openIndex={openIndex}
         setOpenIndex={setOpenIndex}
       />

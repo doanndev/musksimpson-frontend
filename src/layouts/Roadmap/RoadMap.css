@@ -48,7 +48,8 @@
 
 .roadmap-container {
   width: 90%;
-  margin-left: 5%;
+  margin-left: 10%;
+  padding-left: 5%;
 }
 
 .roadmap-container .timeline {
@@ -160,6 +161,8 @@
      }
      .roadmap-container{
         margin-top: 50px;
+        margin-left: 0;
+        padding-left: 0;
      }
 
     .roadmap-container .timeline {

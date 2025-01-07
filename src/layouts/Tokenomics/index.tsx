@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Tokenomics = () => {
     return (
-        <div className='tokenomics-section'>
+        <div id='tokenomics' className='tokenomics-section'>
             <div className='tokenomics-title'>
                 <h1 className='title-text'>TOKENOMICS</h1>
                 <div className='title-underline'></div>
