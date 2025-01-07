@@ -1,0 +1,263 @@
+.buy-form {
+  width: 100%;
+  height: 100vh;
+  background-image: url('/imgs/BuyFormBackground.png');
+  background-position: center;
+  background-size: cover;
+  display: flex;
+}
+
+.introduce-container {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.introduce-container .introduce-img{
+  width: 450px;
+  height: auto;
+}
+
+.introduce-container .introduce-img img {
+  transform: rotate(-35deg);
+  animation: bounce-buyform 10s infinite;
+}
+
+.buy-title {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-shadow: 0px 4px 8px rgba(0, 0, 0, .5);
+  background: linear-gradient(92deg, #00d5ff 1.73%, #ea1af7 99.52%);
+  -webkit-background-clip: text;
+  -webkit-text-stroke: 6px transparent;
+  color: #fff;
+}
+
+.introduce-content {
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.introduce-content .introduce-text {
+  width: 70%;
+  text-align: start;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.buy-section {
+  display: flex;
+  width: 50%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.buy-section .form-section {
+  gap: 15px;
+  padding: 25px 0;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #fff;
+  border-radius: 15px;
+  background: linear-gradient(135deg, rgba(90, 147, 255, 0.8), rgba(162, 210, 255, 0.7), rgba(133, 70, 255, 0.6), rgba(28, 117, 214, 0.9));
+}
+
+
+.break-line {
+  height: .5px;
+  width: 90%;
+  background-color: grey;
+}
+
+.form-section .countdown-title {
+  width: 90%;
+  height: 25px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  font-size: 1rem;
+}
+
+.form-section .price-tag {
+  font-weight: bold;
+}
+
+/* styles/globals.css */
+.form-section .countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+}
+
+.form-section .time {
+  margin: 0 20px;
+  text-align: center;
+}
+
+.form-section .time span:first-child {
+  display: block;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.form-section .time span:last-child {
+  font-size: 1rem;
+  color: white;
+}
+
+.form-section .buy-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 90%;
+}
+
+
+@media (max-width: 1000px) {
+  .buy-form {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+    margin: 10% auto;
+  }
+
+
+  .introduce-container {
+    padding: 10% 5%;
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .introduce-container .introduce-img {
+    width: 350px;
+    height: auto;
+  }
+
+  .introduce-content .introduce-text {
+    margin: 25px auto;
+    padding: 25px;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, .5);
+    width: 50%;
+    font-size: .7rem;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+  .introduce-content .introduce-text:hover {
+    transform: scale(1.01);
+  }
+
+
+  .buy-section {
+    width: 100%;
+    height: auto;
+    padding: 0 5%;
+  }
+  .buy-section .form-section {
+    width: 50%;
+  }
+
+  
+  .form-section .price-tag {
+    font-weight: normal;
+  }
+  
+  .form-section .countdown {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1rem;
+  }
+  
+  .form-section .time {
+    margin: 0 2%;
+    text-align: center;
+  }
+  
+  .form-section .time span:first-child {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .form-section .time span:last-child {
+    font-size: 1rem;
+    color: white;
+  }
+}
+
+@media (max-width: 768px) {
+  .buy-title {
+    font-size: 1.5rem;
+  }
+
+  .introduce-content .introduce-text {
+    width: 90%;
+  }
+
+  .introduce-container .whitepaper-button {
+    padding: 5px 10px;
+    font-size: 1rem;
+  }
+
+  .introduce-container .nft-button {
+    display: none;
+  }
+  .buy-section .form-section {
+    width: 100%;
+  }
+}
+
+
+
+
+@keyframes bounce-buyform {
+  0% {
+    transform: translateY(0%) rotate(-35deg);
+  }
+
+  20% {
+    transform: translateY(-5%) rotate(-35deg);
+  }
+
+  40% {
+    transform: translateY(0%) rotate(-35deg);
+  }
+
+  60% {
+    transform: translateY(-7%) rotate(-35deg);
+  }
+
+  80% {
+    transform: translateY(0%) rotate(-35deg);
+  }
+
+  90% {
+    transform: translateY(-5%) rotate(-35deg);
+  }
+
+  100% {
+    transform: translateY(0) rotate(-35deg);
+  }
+}

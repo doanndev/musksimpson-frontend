@@ -1,0 +1,114 @@
+.tokenomics-section {
+    padding: 5% auto;
+    position: relative;
+    background-image: url('/imgs/TokenomicsBackground.png');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    z-index: -99;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+
+.tokenomics-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: -1; 
+}
+.tokenomics-section .tokenomics-title {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tokenomics-section .title-text {
+    font-size: 2rem;
+    font-weight: bolder;
+}
+
+.tokenomics-section .title-underline {
+    margin-top: -5px;
+    height: .5px;
+    width: 80%;
+    background-color: grey;
+}
+
+.tokenomics-section .tokenomics-infor {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.tokenomics-section .total-supply {
+    padding: 50px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-shadow: 9px 9px 45px -9px rgba(0,0,0,0.67);
+    -moz-box-shadow: 9px 9px 45px -9px rgba(0,0,0,0.67);
+    box-shadow: 9px 9px 45px -9px rgba(0,0,0,0.67);
+    transition: transform 0.5s ease; 
+}
+
+.total-supply:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+
+
+.total-supply h1 {
+    font-size: 2rem;
+    font-weight: bolder;
+    text-shadow: 4px 0px 6px rgba(0,0,0,0.48);
+}
+
+.total-supply p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow: 4px 0px 6px rgba(0,0,0,0.48);
+}
+
+
+@media (max-width:768px) {
+    .tokenomics-section {
+        width: 100%;
+        height: auto;
+        padding: 10% auto;
+    }
+    .tokenomics-section .tokenomics-infor {
+        margin-top: 50px;
+        flex-direction: column;
+        gap: 50px;
+        margin-bottom: 50px;
+        padding: 0 5%;
+    }
+
+    .tokenomics-section .total-supply h1  {
+        font-size: 1rem;
+        text-shadow: 4px 0px 6px rgba(0,0,0,0.48);
+
+    }
+
+    .tokenomics-section .total-supply p {
+        font-size: .7rem;
+        text-shadow: 4px 0px 6px rgba(0,0,0,0.48);
+    }
+}

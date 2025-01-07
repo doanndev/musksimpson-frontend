@@ -1,0 +1,126 @@
+.about-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-image: url('/imgs/AboutBackground.png');
+    background-position: center;
+    background-size: cover;
+    z-index: -99;
+}
+
+.about-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+}
+
+.about-section .about-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.about-section .about-title {
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-title .title-text {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: white;
+}
+
+.about-title .title-underline {
+    margin-top: -5px;
+    height: .5px;
+    width: 5%;
+    background-color: grey;
+}
+
+
+.about-img {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-img img {
+    pointer-events: visible;
+    animation: bounce-about 10s ease infinite;
+}
+
+@keyframes bounce-about {
+    0% {
+        transform: translateY(0%);
+    }
+
+    20% {
+        transform: translateY(-5%);
+    }
+
+    40% {
+        transform: translateY(0%);
+    }
+
+    60% {
+        transform: translateY(-5%);
+    }
+
+    80% {
+        transform: translateY(0%);
+    }
+
+    90% {
+        transform: translateY(-3%);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.about-content {
+    width: 50%;
+    height: 100%;
+    color: white;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-top: 10%;
+    padding: 0 10%;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .about-section {
+        width: 100%;
+        height: auto;
+    }
+
+    .about-section .about-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-container .about-img {
+        margin-top: 20%;
+        width: 100%;
+    }
+
+    .about-container .about-content {
+        width: 100%;
+        margin-bottom: 10%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 768px) {}
