@@ -129,7 +129,7 @@
 }
 
 
-@media (max-width: 1000px) {
+@media (max-width: 1024px) {
   .buy-form {
     width: 100%;
     height: auto;
@@ -150,7 +150,7 @@
   }
 
   .introduce-container .introduce-img {
-    width: 300px;
+    width: 350px;
     height: auto;
   }
 
@@ -215,6 +215,11 @@
   .introduce-container .introduce-img {
     width: 250px;
     height: auto;
+  }
+  .about-img .about-img_content {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 5%;
   }
 
   .introduce-content .introduce-text {

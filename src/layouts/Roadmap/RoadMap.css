@@ -1,48 +1,48 @@
 .roadmap-section {
-    position: relative;
-    background-image: url('/imgs/RoadmapBackground.png');
-    background-position: center;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-    z-index: -99;
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
+  position: relative;
+  background-image: url('/imgs/RoadmapBackground.png');
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  z-index: -99;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .roadmap-section::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.3); 
-    z-index: -1; 
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: -1;
 }
 
 
 .roadmap-section .roadmap-title {
-    width: fit-content;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .roadmap-section .title-text {
-    font-size: 2rem;
-    font-weight: bolder;
+  font-size: 2rem;
+  font-weight: bolder;
 }
 
 .roadmap-section .title-underline {
-    margin-top: -5px;
-    height: .5px;
-    width: 80%;
-    background-color: grey;
+  margin-top: -5px;
+  height: .5px;
+  width: 80%;
+  background-color: grey;
 }
 
 
@@ -84,6 +84,7 @@
   transition: all ease-in-out 0.3s;
   cursor: pointer;
   transform: rotate(45deg);
+  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.7);
 }
 
 .roadmap-container .timeline li:after {
@@ -96,122 +97,192 @@
   left: -50%;
   z-index: -999;
   transition: all ease-in-out 0.3s;
+  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 0.7);
 }
 
 .roadmap-container .timeline li:first-child:after {
   content: none;
 }
+
 .roadmap-container .timeline li.active {
   color: #fff;
 }
+
 .roadmap-container .timeline li.active:before {
   background: #9699FF;
   color: #f1f1f1;
 }
 
-.roadmap-container .timeline li.active + li:after {
+.roadmap-container .timeline li.active+li:after {
   background: #9699FF;
 }
 
 .roadmap-container .timeline .timeline-item {
-    margin-top: 25px;
+  margin-top: 25px;
 }
 
 .roadmap-container .timeline .timeline-item h1 {
-    margin-bottom: 15px;
-    font-weight: bold;
-    font-size: 1.5rem;
+  margin-bottom: 15px;
+  font-weight: bold;
+  font-size: 1.5rem;
 }
 
 .roadmap-container .timeline .timeline-item-content {
-    background-color: rgba(0, 0, 0, .5);
-    border-radius: 5px;
-    gap: 15px;
-    padding: 15px;
-    width: fit-content;
-    font-size: .8rem;
-    text-align: start;
-    cursor: pointer;
-    position: relative;
+  background-color: rgba(0, 0, 0, .5);
+  border-radius: 5px;
+  gap: 15px;
+  padding: 15px;
+  width: fit-content;
+  font-size: .8rem;
+  text-align: start;
+  cursor: pointer;
+  position: relative;
 }
 
 .roadmap-container .timeline .timeline-item-content::after {
-    content: '';
-    position: absolute;
-    top: -10px; 
-    left: 50%; 
-    transform: translate(-40%);
-    width: 0;
-    height: 0;
-    border-left: 10px solid transparent;
-    border-right: 10px solid transparent;
-    border-bottom: 10px solid rgba(0, 0, 0, .5);
+  content: '';
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translate(-40%);
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid rgba(0, 0, 0, .5);
 }
 
 .roadmap-container .timeline .timeline-item-conten p {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
+}
+
+@media (max-width: 1024px) {
+  .roadmap-section {
+    height: auto;
+    padding: 50px auto;
+  }
+
+  .roadmap-container {
+    margin-top: 50px;
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  .roadmap-container .timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .roadmap-container .timeline li {
+    width: 100%;
+    /* Toàn bộ chiều ngang trên màn hình nhỏ */
+    position: relative;
+    text-align: start;
+    margin-bottom: 30px;
+  }
+
+  .roadmap-container .timeline li:before {
+    margin: 0 0 10px 10px;
+    /* Dịch mũi tên */
+  }
+
+  .roadmap-container .timeline li:after {
+    content: none;
+    /* Xóa đường line ngang */
+  }
+
+  .roadmap-container .timeline .timeline-item-content {
+    padding: 15px;
+    width: 100%;
+    /* Đầy chiều ngang trên màn hình nhỏ */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: start;
+  }
+
+  .roadmap-container .timeline .timeline-item-content::after {
+    content: '';
+    /* Giữ tam giác chỉ mũi tên */
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    /* Đặt tam giác vào góc */
+    transform: translate(0, 0);
+  }
 }
 
 
 @media (max-width: 768px) {
-     .roadmap-section {
-        width: 100%;
-        height: auto;
-        padding: 50px auto;
-     }
-     .roadmap-container{
-        margin-top: 50px;
-        margin-left: 0;
-        padding-left: 0;
-     }
+  .roadmap-section {
+    width: 100%;
+    height: auto;
+    padding: 50px auto;
+  }
 
-    .roadmap-container .timeline {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 20px;
-    }
-  
-    .roadmap-container .timeline li {
-      width: 100%; /* Toàn bộ chiều ngang trên màn hình nhỏ */
-      position: relative;
-      text-align: start;
-      margin-bottom: 30px;
-    }
-  
-    .roadmap-container .timeline li:before {
-      margin: 0 0 10px 10px; /* Dịch mũi tên */
-    }
-  
-    .roadmap-container .timeline li:after {
-      content: none; /* Xóa đường line ngang */
-    }
-  
-    .roadmap-container .timeline .timeline-item-content {
-      padding: 15px;
-      width: 100%; /* Đầy chiều ngang trên màn hình nhỏ */
-    }
-  
-    .roadmap-container .timeline .timeline-item-content::after {
-      content: ''; /* Giữ tam giác chỉ mũi tên */
-      position: absolute;
-      top: -10px; 
-      left: 10px; /* Đặt tam giác vào góc */
-      transform: translate(0, 0);
-    }
+  .roadmap-container {
+    margin-top: 50px;
+    margin-left: 0;
+    padding-left: 0;
   }
-  
-  /* Responsive cho màn hình rất nhỏ (điện thoại) */
-  @media screen and (max-width: 480px) {
-    .roadmap-container .timeline li {
-      margin-bottom: 20px;
-    }
-  
-    .roadmap-container .timeline .timeline-item h1 {
-      font-size: 1.2rem;
-    }
-  
-    .roadmap-container .timeline .timeline-item-content {
-      font-size: 0.9rem; /* Giảm kích thước font chữ */
-    }
+
+  .roadmap-container .timeline {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
   }
+
+  .roadmap-container .timeline li {
+    width: 100%;
+    /* Toàn bộ chiều ngang trên màn hình nhỏ */
+    position: relative;
+    text-align: start;
+    margin-bottom: 30px;
+  }
+
+  .roadmap-container .timeline li:before {
+    margin: 0 0 10px 10px;
+    /* Dịch mũi tên */
+  }
+
+  .roadmap-container .timeline li:after {
+    content: none;
+    /* Xóa đường line ngang */
+  }
+
+  .roadmap-container .timeline .timeline-item-content {
+    padding: 15px;
+    width: 100%;
+    /* Đầy chiều ngang trên màn hình nhỏ */
+  }
+
+  .roadmap-container .timeline .timeline-item-content::after {
+    content: '';
+    /* Giữ tam giác chỉ mũi tên */
+    position: absolute;
+    top: -10px;
+    left: 10px;
+    /* Đặt tam giác vào góc */
+    transform: translate(0, 0);
+  }
+}
+
+/* Responsive cho màn hình rất nhỏ (điện thoại) */
+@media screen and (max-width: 480px) {
+  .roadmap-container .timeline li {
+    margin-bottom: 20px;
+  }
+
+  .roadmap-container .timeline .timeline-item h1 {
+    font-size: 1.2rem;
+  }
+
+  .roadmap-container .timeline .timeline-item-content {
+    font-size: 0.9rem;
+    /* Giảm kích thước font chữ */
+  }
+}

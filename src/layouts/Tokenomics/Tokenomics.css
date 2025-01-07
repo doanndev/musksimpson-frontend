@@ -65,6 +65,17 @@
     -moz-box-shadow: 9px 9px 45px -9px rgba(0,0,0,0.67);
     box-shadow: 9px 9px 45px -9px rgba(0,0,0,0.67);
     transition: transform 0.5s ease; 
+    animation: bounce-supply 5s infinite ease-in-out; /* Hiệu ứng di chuyển */
+
+}
+
+@keyframes bounce-supply {
+    0%, 100% {
+        transform: scale(1.1) translateY(0);
+    }
+    50% {
+        transform: scale(1.1) translateY(-10px);
+    }
 }
 
 .total-supply:hover {
@@ -86,12 +97,47 @@
     text-shadow: 4px 0px 6px rgba(0,0,0,0.48);
 }
 
+.tokenomics-img{
+    width: 700px;
+    height: auto;
+}
+
+@media (max-width: 1024px) {
+    .tokenomics-section {
+        height: auto;
+        padding: 15% auto;
+    }
+    .tokenomics-section .tokenomics-title {
+        margin-top: 5%;
+    }
+    .tokenomics-section .tokenomics-infor {
+        flex-direction: column;
+        gap: 50px;
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+
+    .tokenomics-section .total-supply {
+        padding: 15px;
+    }
+
+    .tokenomics-img {
+        width: 650px;
+        height: auto;
+    }
+ }
+
 
 @media (max-width:768px) {
     .tokenomics-section {
         width: 100%;
         height: auto;
         padding: 10% auto;
+    }
+
+    .tokenomics-img {
+        width: 300px;
+        height: auto;
     }
     .tokenomics-section .tokenomics-infor {
         margin-top: 50px;
@@ -104,7 +150,6 @@
     .tokenomics-section .total-supply h1  {
         font-size: 1rem;
         text-shadow: 4px 0px 6px rgba(0,0,0,0.48);
-
     }
 
     .tokenomics-section .total-supply p {

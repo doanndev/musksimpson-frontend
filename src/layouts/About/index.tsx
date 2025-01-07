@@ -12,7 +12,11 @@ const About = () => {
             </div>
             <div className='about-container'>
                 <div className='about-img'>
-                    <Image src={'/imgs/AboutSimpson.png'} width={150} height={150} alt={''} />
+                  <div className='about-img_content'>
+                    <div className='about-window'> 
+                    <Image src={'/imgs/AboutMusksimpson.png'} layout='fill' alt={''} />
+                    </div>
+                  </div>
                 </div>
                 <div className='about-content'>
                     <p className='about-paragraph'>
