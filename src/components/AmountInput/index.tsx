@@ -1,8 +1,11 @@
-import { useState } from "react";
+import React from "react";
 
-function Component() {
-  const [amount, setAmount] = useState("");
+interface AmountInputProps {
+  amount: string;
+  setAmount: React.Dispatch<React.SetStateAction<string>>;
+}
 
+const AmountInput: React.FC<AmountInputProps> = ({ amount, setAmount }) => {
   const Exchange = (amount: string) => {
     const numAmount = Number(amount);
     if (numAmount <= 0) {
@@ -13,16 +16,15 @@ function Component() {
   };
 
   const handleAmountChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = parseFloat(e.target.value) || 0;
+    let value = parseFloat(e.target.value) || 0;
 
-    // Đảm bảo giá trị không âm và không nhỏ hơn 0.1
     if (value < 0) {
-      setAmount("0");
+      value = 0;
     } else if (value < 0.1) {
-      setAmount("0.1");
-    } else {
-      setAmount(value.toFixed(1)); // Giới hạn giá trị đến 1 chữ số thập phân
+      value = 0.1; 
     }
+
+    setAmount(value.toFixed(1)); 
   };
 
   const isError = parseFloat(amount) < 0.1 && amount !== "";
@@ -43,6 +45,6 @@ function Component() {
       </p>
     </div>
   );
-}
+};
 
-export default Component;
+export default AmountInput;
